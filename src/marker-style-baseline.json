@@ -1,0 +1,23 @@
+{
+  "format": "umn-campus-measured-marker-style-baseline",
+  "version": 1,
+  "source": {
+    "url": "https://umn-vr.github.io/tour/twin-cities/scene.json",
+    "sha256": "61c25d55523be24e4d937e594169c3d5d385f816005bc20bf209201c794686ed",
+    "sizeBytes": 377117,
+    "id": "umn-twin-cities",
+    "revision": "4b89d4e2af09"
+  },
+  "measuredSourcePath": "/Users/felg/gh/UMN-VR/UMN-VR.github.io-archive/public/tour/twin-cities/scene.json",
+  "entityCount": 60,
+  "individualMarkerStyleCount": 0,
+  "authoredRootStyle": {
+    "outline": { "color": "#ffcc33", "widthPx": 2 },
+    "hover": { "scale": 1.3 }
+  },
+  "resolvedStyle": {
+    "outline": { "color": [1, 0.8, 0.2, 1], "widthPx": 2 },
+    "hoverScale": 1.3
+  },
+  "measurement": "Read and hash only the pinned authored scene JSON; its sixty markers have no individual style. No media or private backup was read."
+}

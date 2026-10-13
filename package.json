@@ -1,0 +1,54 @@
+{
+  "name": "@umn-vr/browser-testing",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "repository": "https://github.com/UMN-VR/browser-testing",
+  "files": [
+    "src",
+    "docs",
+    "release",
+    "README.md",
+    "AGENTS.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "types": "./src/routes.d.mts",
+      "import": "./src/routes.mjs"
+    },
+    "./local-smoke": {
+      "types": "./src/local-smoke.d.mts",
+      "import": "./src/local-smoke.mjs"
+    },
+    "./local-smoke-cli": "./src/local-smoke-cli.mjs",
+    "./native-observations": {
+      "types": "./src/native-observations.d.mts",
+      "import": "./src/native-observations.mjs"
+    },
+    "./native-qualification-cli": "./src/native-qualification-cli.mjs"
+  },
+  "dependencies": {
+    "@foss-earth/browser-testing": "file:deps/foss-earth-browser-testing-d63ca6e46d94dc90635f3da4b9d73a741347f026.tgz"
+  },
+  "devDependencies": {
+    "@foss-earth/ci": "file:deps/foss-earth-ci-1db73d1ddb342e348a2c9e8387f7bbc7ebb3225e.tgz",
+    "@foss-earth/browser-testing": "file:deps/foss-earth-browser-testing-d63ca6e46d94dc90635f3da4b9d73a741347f026.tgz"
+  },
+  "scripts": {
+    "check:attribution": "node node_modules/@foss-earth/ci/bin/attribution.mjs --repo . --refs-file intended-publication-refs.json",
+    "check:conformance": "node node_modules/@foss-earth/ci/bin/conformance.mjs --consumer . --trusted-release .attribution-release.json --output-root .local/build/conformance",
+    "test": "node --test --test-concurrency=1 tests/*.test.mjs",
+    "check:implementation": "npm run check:source && npm test",
+    "ci": "npm run check:conformance && npm run check:implementation",
+    "check:source": "node --check src/routes.mjs && node --check src/browser.mjs && node --check src/assertions.mjs && node --check src/fixtures.mjs && node --check src/probes.mjs && node --check src/expectations.mjs && node --check src/local-smoke.mjs && node --check src/local-smoke-cli.mjs && node --check src/native-observations.mjs && node --check src/native-qualification-cli.mjs && node --check src/fixture-update.mjs"
+  },
+  "migration": {
+    "state": "SOURCE_ONLY; Campus assertions prepared, compiled native observations and granted browser candidate pending",
+    "lockQualification": "exact immutable resolution requires fresh grant",
+    "qualifiedHelper": "release/shared-helper.json"
+  },
+  "peerDependencies": {
+    "@foss-earth/browser-testing": "0.1.0"
+  }
+}

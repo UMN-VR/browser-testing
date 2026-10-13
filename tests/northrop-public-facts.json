@@ -1,0 +1,182 @@
+{
+  "sourceSha256": "61c25d55523be24e4d937e594169c3d5d385f816005bc20bf209201c794686ed",
+  "entity": {
+    "id": "northrop-mall",
+    "type": "panorama",
+    "assetId": "northrop-mall",
+    "title": "Northrop Mall",
+    "description": "Welcome to the University of Minnesota Twin Cities! Your tour begins here on Northrop Mall, the historic heart of the East Bank campus, designed by renowned architect Cass Gilbert. Stretching between Northrop Auditorium and Coffman Memorial Union, this expansive lawn is a popular gathering spot for students and members of the campus community.",
+    "capture": {
+      "longitudeDeg": -93.234272,
+      "latitudeDeg": 44.9762821,
+      "height": null,
+      "horizontalAccuracyMeters": 65
+    },
+    "imagePose": {
+      "headingDeg": 0,
+      "pitchDeg": 0,
+      "rollDeg": 0,
+      "aligned": false
+    },
+    "marker": {
+      "mode": "ground-relative",
+      "eastM": 0,
+      "northM": 0,
+      "offsetM": 25,
+      "radiusMeters": 3
+    },
+    "initialView": {
+      "headingDeg": 66.13,
+      "pitchDeg": 18.128,
+      "verticalFovDeg": 100
+    },
+    "links": [
+      {
+        "id": "hotspot-109199",
+        "target": "inside-northrop-auditorium",
+        "label": "Inside Northrop Auditorium",
+        "direction": {
+          "headingDeg": 90.646,
+          "pitchDeg": 6.614
+        }
+      },
+      {
+        "id": "hotspot-111886",
+        "target": "walter-library-lobby",
+        "label": "Walter Library Lobby",
+        "direction": {
+          "headingDeg": 284.711,
+          "pitchDeg": 9.522
+        }
+      },
+      {
+        "id": "stop-306373-folwell-hall",
+        "target": "folwell-hall",
+        "label": "Folwell Hall"
+      },
+      {
+        "id": "next-stop",
+        "target": "walter-library-lobby",
+        "label": "Next stop: Learning at the Libraries"
+      }
+    ],
+    "extensions": {
+      "umn-vr.tour": {
+        "youvisit": {
+          "panoramas": [
+            363729
+          ],
+          "stops": [
+            306373
+          ]
+        },
+        "capture": "YouVisit's tour point for stop 306373, Welcome to the UMN Twin Cities (feat. Northrop Mall), whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "north": {
+          "provenance": "Not aligned: YouVisit's images carry no orientation, so north is unknown."
+        }
+      }
+    }
+  },
+  "asset": {
+    "id": "northrop-mall",
+    "revision": "ac6969926c0b",
+    "type": "panorama-image",
+    "colorSpace": "srgb",
+    "alpha": "opaque",
+    "attribution": {
+      "text": "© Regents of the University of Minnesota"
+    }
+  },
+  "aliasEntity": {
+    "id": "walter-library-lobby",
+    "type": "panorama",
+    "assetId": "walter-library-lobby",
+    "title": "Walter Library Lobby",
+    "capture": {
+      "longitudeDeg": -93.2362247,
+      "latitudeDeg": 44.9752803,
+      "height": null,
+      "horizontalAccuracyMeters": 65
+    },
+    "imagePose": {
+      "headingDeg": 0,
+      "pitchDeg": 0,
+      "rollDeg": 0,
+      "aligned": false
+    },
+    "marker": {
+      "mode": "ground-relative",
+      "eastM": 0,
+      "northM": 0,
+      "offsetM": 25,
+      "radiusMeters": 3
+    },
+    "initialView": {
+      "headingDeg": 331.365,
+      "pitchDeg": -0.614,
+      "verticalFovDeg": 100
+    },
+    "links": [
+      {
+        "id": "hotspot-109203",
+        "target": "the-toaster-innovation-hub",
+        "label": "The Toaster Innovation Hub",
+        "direction": {
+          "headingDeg": 0.602,
+          "pitchDeg": 11.639
+        }
+      },
+      {
+        "id": "hotspot-109204",
+        "target": "walter-library-study-space",
+        "label": "Walter Library Study Space",
+        "direction": {
+          "headingDeg": 279.237,
+          "pitchDeg": 8.705
+        }
+      },
+      {
+        "id": "hotspot-109205",
+        "target": "walter-library-computer-lab",
+        "label": "Walter Library Computer Lab",
+        "direction": {
+          "headingDeg": 80.948,
+          "pitchDeg": 9.483
+        }
+      },
+      {
+        "id": "stop-306373",
+        "target": "northrop-mall",
+        "label": "Back to Northrop Mall"
+      },
+      {
+        "id": "next-stop",
+        "target": "fraser-hall-student-lounge",
+        "label": "Next stop: Research & Innovation (feat. Fraser Hall)"
+      },
+      {
+        "id": "previous-stop",
+        "target": "northrop-mall",
+        "label": "Previous stop: Welcome to the UMN Twin Cities (feat. Northrop Mall)"
+      }
+    ],
+    "extensions": {
+      "umn-vr.tour": {
+        "youvisit": {
+          "panoramas": [
+            363722,
+            368155
+          ],
+          "stops": [
+            306373,
+            306357
+          ]
+        },
+        "capture": "YouVisit's tour point for stop 306357, Learning at the Libraries, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "north": {
+          "provenance": "Not aligned: YouVisit's images carry no orientation, so north is unknown."
+        }
+      }
+    }
+  }
+}
