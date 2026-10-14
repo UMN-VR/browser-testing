@@ -110,10 +110,10 @@ function domSnapshot() {
     canvases: [...document.querySelectorAll("canvas")].filter(visible).map(canvas => ({ width: canvas.width, height: canvas.height })),
     selectorImages: [...document.querySelectorAll('nav[aria-label="Campus tours"] li > a img')].map(image => ({ complete: image.complete, naturalWidth: image.naturalWidth })),
     entries: [...document.querySelectorAll(".foss-earth-scene-entry")].map(entry => ({
-      id: entry.dataset.panorama,
-      title: entry.querySelector("button[data-panorama]")?.textContent?.trim() ?? "",
+      id: entry.dataset.sphere,
+      title: entry.querySelector("button[data-sphere]")?.textContent?.trim() ?? "",
       state: entry.querySelector(".foss-earth-scene-entry__state")?.textContent?.trim() ?? "",
-      disabled: entry.querySelector("button[data-panorama]")?.disabled ?? true,
+      disabled: entry.querySelector("button[data-sphere]")?.disabled ?? true,
     })),
     text: document.body?.textContent ?? "",
   };
@@ -265,9 +265,9 @@ export async function runCompiledCampusSmoke(input, ports) {
       const listed = await bounded(`${route.id} actual authored membership`, () => actualCampusDOM(page, routePath, value => value.entries.length === expectedIds.length, fixture.pageOptions.timeouts.commandMs));
       assert.deepEqual(listed.entries.map(entry => entry.id), expectedIds, "Actual Scenes DOM membership/order differs from the accepted content");
       await bounded(`${route.id} actual panorama selection`, () => page.evaluate(`(() => {
-        const button = [...document.querySelectorAll('.foss-earth-scene-entry button[data-panorama]')].find(node => node.dataset.panorama === ${JSON.stringify(route.panoramaId)});
+        const button = [...document.querySelectorAll('.foss-earth-scene-entry button[data-sphere]')].find(node => node.dataset.sphere === ${JSON.stringify(route.panoramaId)});
         if (!button || button.disabled || !button.getClientRects().length) throw new Error('Actual authored panorama is not selectable');
-        button.click(); return { id: button.dataset.panorama, label: button.textContent.trim() };
+        button.click(); return { id: button.dataset.sphere, label: button.textContent.trim() };
       })()`));
       const native = await bounded(`${route.id} actual native photograph`, () => ports.readSceneState(page, route, { signal: abort.signal, expectedActivePanoramaId: route.panoramaId, timeoutMs: fixture.pageOptions.timeouts.commandMs }));
       assertNativeObservation(native, route);

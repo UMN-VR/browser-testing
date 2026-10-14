@@ -28,7 +28,7 @@ links/group provenance. No generic scene or image validation is duplicated.
 
 Built-in actions select the actual shared UI Scenes tab or menu, read the real
 `.foss-earth-scene-entry` membership/order and click the actual
-`button[data-panorama]`. They never install app state or simulate readiness.
+`button[data-sphere]`. They never install app state or simulate readiness.
 The source-bound `ports.readSceneState(page, route, context)` must await and read
 the actual compiled native scene/viewer state. The built-in
 `readCompiledCampusSceneState` can supply this callback: it calls the Campus

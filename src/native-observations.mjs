@@ -79,7 +79,7 @@ export function createCampusObservationPorts(fixture, options) {
   }
   async function enter(page, id) {
     await open(page, 'scenes');
-    await activate(page, `document.querySelector('button[data-panorama=' + ${JSON.stringify(JSON.stringify(id))} + ']')`);
+    await activate(page, `document.querySelector('button[data-sphere=' + ${JSON.stringify(JSON.stringify(id))} + ']')`);
     await wait(page, `${READ}?.sceneState?.status?.phase === 'immersive' && ${READ}.sceneState.status.active === ${JSON.stringify(id)}`, `entered actual panorama ${id}`);
     // The shared workspace opens its panorama context automatically.
     await wait(page, `Boolean([...document.querySelectorAll('.foss-earth-tab-button')].find(e => e.textContent === '360: ' + ${READ}.activeImage?.title))`, 'dynamic 360 title');
