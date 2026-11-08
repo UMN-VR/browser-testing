@@ -7,7 +7,9 @@ Independent sibling repository. Prepared public releases do not require the priv
 The public entry exports Campus content, route, tab, report and update assertions
 plus runners using the pinned shared browser helper. The
 [qualification guide](docs/qualification.md) describes required compiled seals,
-actual observation ports, finite timeouts and retained evidence. The selector's
+actual observation ports, finite timeouts and retained evidence. The
+[local smoke](docs/local-smoke.md) is the bounded first check of a compiled
+four-route assembly. The selector's
 JavaScript-disabled Chrome fixture is independent of App and Scenes inputs.
 Full four-route qualification still needs qualified native, content and worker
 deliveries. Browser fixtures reject source plans; no passing result is claimed.
